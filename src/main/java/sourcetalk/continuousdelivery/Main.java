@@ -72,6 +72,7 @@ public class Main {
         httpServer.setHandler(handlers);
     }
 
+    //Creates the shutdown server on 33221. Call localhost/shutdown to gracefully shut down the system
     private static void createShutdownServer() {
         shutdownServer = new Server(33221);
         shutdownServer.setHandler(new AbstractHandler() {
